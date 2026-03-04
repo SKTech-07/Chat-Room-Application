@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login" id="join-room">
+      <h1>Have Fun</h1>
+      <form>
+        <label>Username</label>
+        <input id="username" placeholder="Enter your username" /><br>
+        <label>Code word</label>
+        <div class="codeword">
+          <input type="password" id="room_code" placeholder="Enter code word" /><br>
+          <input type="checkbox" onclick="room_code.type = this.checked ? 'text' : 'password'">
+        </div>
+      </form>
+      <button id="join-btn">Join Room</button>
+    </div>
+    <div id="chat-room" style="display:none;">
+      <ul id="messages"></ul>
+      <form id="chat-form">
+        <input id="message-input" autocomplete="off" placeholder="Type a message..." />
+        <button>Send</button>
+      </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
